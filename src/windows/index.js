@@ -6,6 +6,7 @@ import Text from "#windows/Text.jsx";
 import Image from "#windows/Image.jsx";
 import Contact from "#windows/Contact.jsx";
 import Photos from "#windows/Photos.jsx";
+import Archive from "#windows/Archive.jsx";
 
 export {
     Terminal,
@@ -16,4 +17,5 @@ export {
     Image,
     Contact,
     Photos,
+    Archive
 }
