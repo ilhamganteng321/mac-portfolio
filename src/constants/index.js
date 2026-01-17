@@ -152,29 +152,36 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/ilhamganteng321",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
+    text: "Whatsapp",
+    icon: "/icons/whatsapp.png",
     bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    link: "https://wa.me/628818250907",
   },
   {
     id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
+    text: "Instagram",
+    icon: "/icons/instagram.svg",
     bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    link: "https://www.instagram.com/aa_dinda1?igsh=c3Bvemxva3hkbjNl",
   },
   {
     id: 4,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    text: "Email",
+    icon: "/icons/email.png",
+    bg: "#f6c348",
+    link: "mailto:ilhamariforpin007tea@gmail.com?subject=Halo%20Ilham!&body=Halo%20Ilham,%0ASaya%20ingin%20bertanya%20tentang%20project%20Anda.",
   },
+  // {
+  //   id: 4,
+  //   text: "LinkedIn",
+  //   icon: "/icons/linkedin.svg",
+  //   bg: "#05b6f6",
+  //   link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+  // },
 ];
 
 const photosLinks = [
@@ -306,7 +313,7 @@ const WORK_LOCATION = {
             "It allows users to create, edit, and manage blog posts through a clean and intuitive interface.",
             "Firebase is used as the backend to handle data storage, authentication, and real-time content updates.",
             "The application supports instant publishing and live updates without page reloads.",
-            "This project focuses on simplicity, responsive design, and efficient content management."
+            "This project focuses on simplicity, responsive design, and efficient content management.",
           ],
         },
 
@@ -327,7 +334,7 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/blog-app.png",
-        }
+        },
       ],
     },
 
@@ -352,7 +359,7 @@ const WORK_LOCATION = {
             "It integrates the CoinGecko API to display live price updates, market trends, and detailed asset information.",
             "Interactive charts built with Chart.js help users visualize price movements and market changes clearly.",
             "The dashboard is developed using React and Tailwind CSS to ensure responsive layouts and smooth performance.",
-            "This project focuses on data visualization, real-time API handling, and a clean, intuitive user interface."
+            "This project focuses on data visualization, real-time API handling, and a clean, intuitive user interface.",
           ],
         },
         {
@@ -417,7 +424,7 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/finance.png",
-        }
+        },
       ],
     },
     {
@@ -440,7 +447,7 @@ const WORK_LOCATION = {
             "Built using Next.js and Tailwind CSS, the app provides fast page transitions and responsive layouts.",
             "Users can easily navigate between surahs and verses with smooth scrolling and clear typography.",
             "The application includes translation support to help users understand the meaning of each verse.",
-            "This project focuses on readability, performance, and a comfortable reading experience across devices."
+            "This project focuses on readability, performance, and a comfortable reading experience across devices.",
           ],
         },
         {
@@ -460,7 +467,7 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/quran.png",
-        }
+        },
       ],
     },
   ],
@@ -584,6 +591,5 @@ const WINDOW_CONFIG = {
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
-
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

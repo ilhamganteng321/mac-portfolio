@@ -1,47 +1,73 @@
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
-import {WindowControls} from "#components/index.js";
-import {Download} from "lucide-react";
-import {Document, Page, pdfjs} from "react-pdf";
-import "react-pdf/dist/Page/AnnotationLayer.css"
+import { WindowControls } from "#components/index.js";
+import { ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import React from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
 ).toString();
 
 const Resume = () => {
-    return (
-        <>
-            <div id="window-header">
-                <WindowControls target="resume"/>
-                <h2>resume.pdf</h2>
+  const [page, setPage] = React.useState(1);
+  const [totalPages, setTotalPages] = React.useState(null);
 
-                <a
-                    href="/files/resume (2).pdf"
-                    download
-                    className="cursor-pointer"
-                    title="Download resume">
-                    <Download className="icon"/>
-                </a>
-            </div>
-            <Document file="files/resume (2).pdf">
-                <Page
-                    pageNumber={1}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}/>
-                <Page
-                    pageNumber={2}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}/>
-                <Page
-                    pageNumber={3}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}/>
-            </Document>
-        </>
-    )
-}
+  const nextPage = () => {
+    if (totalPages && page < totalPages) {
+      setPage((prev) => prev + 1);
+    }
+  };
+
+  const previousPage = () => {
+    if (page > 1) {
+      setPage((prev) => prev - 1);
+    }
+  };
+
+  return (
+    <>
+      <div id="window-header" className="flex items-center gap-3">
+        <WindowControls target="resume" />
+        <h2 className="flex-1">resume.pdf</h2>
+
+        <a
+          href="/files/resume (2).pdf"
+          download
+          title="Download resume"
+        >
+          <Download className="icon" />
+        </a>
+
+        <ChevronLeft
+          className={`icon ${page === 1 ? "opacity-40 pointer-events-none" : ""}`}
+          onClick={previousPage}
+        />
+
+        <ChevronRight
+          className={`icon ${
+            totalPages && page === totalPages
+              ? "opacity-40 pointer-events-none"
+              : ""
+          }`}
+          onClick={nextPage}
+        />
+      </div>
+
+      <Document
+        file="/files/resume (2).pdf"
+        onLoadSuccess={({ numPages }) => setTotalPages(numPages)}
+      >
+        <Page
+          pageNumber={page}
+          renderTextLayer={false}
+          renderAnnotationLayer={false}
+        />
+      </Document>
+    </>
+  );
+};
 
 const ResumeWindow = WindowWrapper(Resume, "resume");
-
 export default ResumeWindow;

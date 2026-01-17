@@ -92,6 +92,150 @@ body {
   background: transparent;
 }
 
+/* Experience Section */
+.experience {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    min-height: 100%;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #1e293b;
+    text-align: center;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.exp-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.position {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+.year-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.375rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.exp-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    border-radius: 0.75rem;
+}
+
+.exp-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.bullet-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.react-pdf__Page {
+  transition: opacity 0.2s ease;
+}
+
+.tech-icon {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.375rem;
+    background: #f8fafc;
+    color: #475569;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experience {
+        padding: 1rem;
+    }
+    
+    .experience h2 {
+        font-size: 2rem;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tech-icons {
+        align-self: flex-start;
+    }
+}
+
+
+
 @theme {
     --font-georama: "Georama", sans-serif;
     --font-roboto: "Roboto Mono", monospace;
